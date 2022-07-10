@@ -4,12 +4,133 @@
 	box-sizing: border-box;
 }
 body {
-	background-image: url("bg.png");
+	background-image: url("img/bg.png");
+	background: scaleX(-1);
+
 	background-repeat: no-repeat;
 	position: relative;
 	background-size: cover;
 
-    @media screen and (max-width: 1440px) {
-        background-size: auto;
-    }
+	@media screen and (max-width: 1440px) {
+		background-size: auto;
+	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+
+	color: #fff;
+	font-family: "Inter", sans-serif;
+	a {
+		color: inherit;
+		text-decoration: none;
+		a:hover {
+			color: inherit;
+		}
+	}
+	.main {
+		width: 476.66px;
+		height: 670px;
+		background: linear-gradient(
+			93.68deg,
+			rgba(43, 43, 43, 0.11) 2.77%,
+			rgba(18, 18, 18, 0.29) 96.83%
+		);
+		box-shadow: 12px 14px 12px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(20px);
+		border-radius: 16px;
+		padding: 20px;
+		.header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 16px;
+
+			img {
+				width: 165px;
+			}
+			p {
+				padding: 20px 0;
+			}
+		}
+		.links {
+			font-size: 20px;
+			.here {
+				display: flex;
+				align-items: center;
+				img {
+					padding-left: 10px;
+					width: 80px;
+				}
+			}
+			ul {
+				list-style-type: none;
+				display: flex;
+				display: flex;
+				flex-direction: column;
+				li {
+					padding: 15px 0;
+					a {
+						background: rgba(15, 15, 15, 0.4);
+						border-radius: 29px;
+						height: 64px;
+						display: flex;
+						align-items: center;
+						width: 100%;
+						letter-spacing: 0.035em;
+						color: #c4c4c4;
+						transition: color 0.1s linear, background 0.2s linear;
+
+						svg {
+							fill: #c4c4c4;
+							margin: 0 20px;
+							width: 40px;
+							transition: fill 0.1s linear, margin 0.1s linear;
+						}
+					}
+					a:hover {
+						svg {
+							margin: 0 40px 0 30px;
+							fill: #fff;
+						}
+						background: rgba(15, 15, 15, 0.63);
+
+						color: #fff;
+					}
+				}
+				li:last-of-type {
+					padding-bottom: 0;
+				}
+			}
+			.fingerup {
+				font-size: 11px;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				width: 90px;
+
+				img {
+					width: 90px;
+				}
+				p {
+					margin-top: 5px;
+				}
+			}
+		}
+		footer {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: center;
+			p {
+				font-weight: 700;
+				font-size: 48px;
+				line-height: 58px;
+				letter-spacing: 0.035em;
+				color: rgba(255, 255, 255, 0.13);
+			}
+		}
+	}
 }
