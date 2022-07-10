@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-image: url("bg.png");
+	background-repeat: no-repeat;
+	position: relative;
+	background-size: cover;
+
+    @media screen and (max-width: 1440px) {
+        background-size: auto;
+    }
+}
