@@ -10,19 +10,28 @@ body {
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: #fff;
   font-family: "Inter", sans-serif;
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -40,19 +49,28 @@ body a a:hover {
   color: inherit;
 }
 
-body .main {
+body .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .first .main {
   width: 476.66px;
-  height: 670px;
   background: linear-gradient(93.68deg, rgba(43, 43, 43, 0.11) 2.77%, rgba(18, 18, 18, 0.29) 96.83%);
   -webkit-box-shadow: 12px 14px 12px rgba(0, 0, 0, 0.25);
           box-shadow: 12px 14px 12px rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border-radius: 16px;
-  padding: 20px;
+  padding: 16px;
 }
 
-body .main .header {
+body .first .main .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,22 +84,40 @@ body .main .header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 16px;
+  font-size: 15px;
 }
 
-body .main .header img {
+@media screen and (max-width: 425px) {
+  body .first .main .header {
+    font-size: 14px;
+  }
+}
+
+body .first .main .header img {
   width: 165px;
 }
 
-body .main .header p {
+@media screen and (max-width: 425px) {
+  body .first .main .header img {
+    width: 120px;
+  }
+}
+
+body .first .main .header p {
   padding: 20px 0;
 }
 
-body .main .links {
+body .first .main .links {
   font-size: 20px;
 }
 
-body .main .links .here {
+@media screen and (max-width: 425px) {
+  body .first .main .links {
+    font-size: 16px;
+  }
+}
+
+body .first .main .links .here {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,12 +126,18 @@ body .main .links .here {
           align-items: center;
 }
 
-body .main .links .here img {
+body .first .main .links .here img {
   padding-left: 10px;
   width: 80px;
 }
 
-body .main .links ul {
+@media screen and (max-width: 425px) {
+  body .first .main .links .here img {
+    width: 70px;
+  }
+}
+
+body .first .main .links ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,11 +149,11 @@ body .main .links ul {
           flex-direction: column;
 }
 
-body .main .links ul li {
+body .first .main .links ul li {
   padding: 15px 0;
 }
 
-body .main .links ul li a {
+body .first .main .links ul li a {
   background: rgba(15, 15, 15, 0.4);
   border-radius: 29px;
   height: 64px;
@@ -121,14 +163,20 @@ body .main .links ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   letter-spacing: 0.035em;
+  width: 90%;
   color: #c4c4c4;
   -webkit-transition: color 0.1s linear, background 0.2s linear;
   transition: color 0.1s linear, background 0.2s linear;
 }
 
-body .main .links ul li a svg {
+@media screen and (max-width: 425px) {
+  body .first .main .links ul li a {
+    height: 44px;
+  }
+}
+
+body .first .main .links ul li a svg {
   fill: #c4c4c4;
   margin: 0 20px;
   width: 40px;
@@ -136,21 +184,27 @@ body .main .links ul li a svg {
   transition: fill 0.1s linear, margin 0.1s linear;
 }
 
-body .main .links ul li a:hover {
+@media screen and (max-width: 425px) {
+  body .first .main .links ul li a svg {
+    width: 30px;
+  }
+}
+
+body .first .main .links ul li a:hover {
   background: rgba(15, 15, 15, 0.63);
   color: #fff;
 }
 
-body .main .links ul li a:hover svg {
+body .first .main .links ul li a:hover svg {
   margin: 0 40px 0 30px;
   fill: #fff;
 }
 
-body .main .links ul li:last-of-type {
+body .first .main .links ul li:last-of-type {
   padding-bottom: 0;
 }
 
-body .main .links .fingerup {
+body .first .main .links .fingerup {
   font-size: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,15 +219,21 @@ body .main .links .fingerup {
   width: 90px;
 }
 
-body .main .links .fingerup img {
+body .first .main .links .fingerup img {
   width: 90px;
 }
 
-body .main .links .fingerup p {
+@media screen and (max-width: 425px) {
+  body .first .main .links .fingerup img {
+    width: 70px;
+  }
+}
+
+body .first .main .links .fingerup p {
   margin-top: 5px;
 }
 
-body .main footer {
+body .first .main footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,11 +249,255 @@ body .main footer {
           justify-content: center;
 }
 
-body .main footer p {
+body .first .main footer p {
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
   letter-spacing: 0.035em;
   color: rgba(255, 255, 255, 0.13);
+}
+
+@media screen and (max-width: 425px) {
+  body .first .main footer p {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body .second {
+    width: 100%;
+    padding: 40px 0;
+  }
+}
+
+body .second .main-text {
+  height: 100%;
+}
+
+body .second .main-text .me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body .second .main-text .me h1 {
+  font-weight: 400;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .me h1 {
+    font-size: 28px;
+  }
+}
+
+body .second .main-text .me p {
+  color: #858585;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .me p {
+    font-size: 16px;
+  }
+}
+
+body .second .main-text .langs {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .second .main-text .langs h2 {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .langs h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .langs p {
+    font-size: 18px;
+  }
+}
+
+body .second .main-text .langs p span:nth-child(1) {
+  color: #faff00;
+}
+
+body .second .main-text .langs p span:nth-child(2) {
+  color: #ff5c00;
+}
+
+body .second .main-text .langs p span:nth-child(3) {
+  color: #00a3ff;
+}
+
+body .second .main-text .langs p span:nth-child(4) {
+  color: #ebff00;
+}
+
+body .second .main-text .contact {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .second .main-text .contact h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .contact h3 {
+    font-size: 16px;
+  }
+}
+
+body .second .main-text .contact p {
+  color: #858585;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .contact p {
+    font-size: 14px;
+  }
+}
+
+body .second .main-text .projects {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .second .main-text .projects h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .projects h3 {
+    font-size: 16px;
+  }
+}
+
+body .second .main-text .projects p {
+  font-size: 20px;
+  color: #858585;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .projects p {
+    font-size: 14px;
+  }
+}
+
+body .second .main-text .projects p a {
+  color: #ae47ff;
+  text-decoration: underline;
+}
+
+body .second .main-text .projects p a:hover {
+  color: #9913ff;
+}
+
+body .second .main-text .projects .links {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .second .main-text .projects .links a {
+  color: #00ff19;
+  text-decoration: underline;
+  font-size: 16px;
+  -webkit-transition: color 0.06s linear, font-size 0.06s linear;
+  transition: color 0.06s linear, font-size 0.06s linear;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .projects .links a {
+    font-size: 12px;
+  }
+}
+
+body .second .main-text .projects .links a:hover {
+  color: #19c52a;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 425px) {
+  body .second .main-text .projects .links a:hover {
+    font-size: 14px;
+  }
+}
+
+body .first,
+body .second {
+  height: 670px;
+  margin-top: 40px;
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  body .first,
+  body .second {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
